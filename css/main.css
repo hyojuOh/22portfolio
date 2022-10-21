@@ -72,18 +72,20 @@ section:nth-child(even){
     position: relative;
 }
 .text{
+    position: relative;
     padding-top: 3%;
     padding-left: 3%;
     font-family: 'Cafe24Oneprettynight';
     font-size: 1.2rem;
     line-height: 24px;
+    z-index: 999999999;
 }
 .po{
-    background: #849204;
+    background: #ffc7c6;
     width: 200%;
     height: 70%;
     position: relative;
-    opacity: .5;
+    opacity: 1;
     /* z-index: 1; */
     transform: rotate(5deg) translateX(10000px);
     transition: .8s;
@@ -578,11 +580,11 @@ section.on .mockup{
     transition-delay: 1.2s;
 }
 .o-fol{
-    background: #849204;
+    background: #ffc7c6;
     width: 200%;
     height: 70%;
     position: relative;
-    opacity: .4;
+    opacity: 1;
     /* z-index: 1; */
     transform: rotate(5deg) translateX(-10000px);
     transition: .8s;
