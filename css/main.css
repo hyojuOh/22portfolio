@@ -1,0 +1,624 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@font-face {
+    font-family: 'Cafe24Shiningstar';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Shiningstar.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ghanachoco';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cafe24Oneprettynight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --btn-bg:#333;
+    --btn-color:#fff;
+    --cir-bg:#ccc;
+    --light-btn-bg:rgb(26, 165, 72);
+}
+
+*{margin: 0; padding: 0;}
+img{display: block; width: 100%;}
+a{
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+li{list-style: none;}
+
+section{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+section:nth-child(even){
+    background: #ddd;
+}
+
+#intro .title{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* #intro .title h1{
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#intro .title p{
+    font-family: 'RIDIBatang';
+} */
+
+#profile .title{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* 1장 */
+#intro{
+    overflow: hidden;
+    position: relative;
+}
+.text{
+    padding-top: 3%;
+    padding-left: 3%;
+    font-family: 'Cafe24Oneprettynight';
+    font-size: 1.2rem;
+    line-height: 24px;
+}
+.po{
+    background: #849204;
+    width: 200%;
+    height: 70%;
+    position: relative;
+    opacity: .5;
+    /* z-index: 1; */
+    transform: rotate(5deg) translateX(10000px);
+    transition: .8s;
+    transition-delay: 1.2s;
+}
+.fol{
+    background: rgb(114, 114, 114);
+    width: 200%;
+    height: 70%;
+    position: relative;
+    opacity: .4;
+    /* z-index: 1; */
+    transform: rotate(5deg) translateX(-10000px);
+    transition: .8s;
+    transition-delay: 1.4s;
+}
+.port{
+    transform: rotate(-15deg) translateX(-1200px);
+    transform-origin: left center;
+    transition: .8s;
+    transition-delay: 1s;
+    width: 120%;
+    padding-bottom: 0px;
+}
+.folio{
+    transform: rotate(-15deg) translateX(1200px);
+    transform-origin: right center;
+    transition: .8s;
+    transition-delay: 1.2s;
+    width: 120%;
+    padding-top: 60px;
+}
+#intro.on .po{
+    transform: rotate(10deg) translateX(-100px);
+    width: 300%;
+}
+#intro.on .fol{
+    transform: rotate(10deg) translateX(-100px);
+    width: 300%;
+}
+
+#intro.on .port{
+    transform: rotate(-15deg);
+}
+#intro.on .folio{
+    transform: rotate(-15deg);
+}
+
+/* 다크모드 */
+.btn{
+    width:120px; height:40px;
+    border-radius: 20px;
+    background:var(--btn-bg);
+    position: absolute;
+    top: 20px;
+    left: 40px;
+}
+.btn.active{
+    background:var(--light-btn-bg);
+}
+.btn-circle{
+    width:36px; height:36px;
+    border-radius: 50%;
+    background:var(--cir-bg);
+    position: absolute;
+    top:2px;  left:2px; 
+    transition: .3s;         
+}
+.btn.active .btn-circle{
+    left:82px;
+}
+.btn-text{
+    text-align: center;
+    line-height: 40px;
+    color:var(--btn-color);
+    font-size: .8rem;
+    transform: translateX(10px);
+    transition: .3s;
+}
+.btn.active .btn-text{
+    transform: translateX(-15px);
+}
+
+#profile.active{
+    background:var(--btn-bg);
+    color:var(--btn-color);
+}
+/* 2장 프로필 */
+.hj{
+    width: 200px;
+    padding-top: 130px;
+    padding-left: 20px;
+}
+.name{
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 2rem;
+    font-family: 'Cafe24Shiningstar';
+    line-height: 50px;
+}
+.name span{
+    font-size: 3rem;
+    padding-left: 90px;
+    color: #8E88B8;
+}
+aside p{
+    line-height: 26px;
+    font-size: 1rem;
+    padding-left: 10px;
+    font-family: 'Cafe24Oneprettynight';
+}
+aside h3{
+    line-height: 80px;
+    padding-top: 130px;
+    font-family: 'ghanachoco';
+    font-size: 1.5rem;
+}
+.mb h3{
+    padding-top: 52px;
+}
+
+.profile{
+    display: flex;
+    justify-content: space-around;
+}
+aside{
+    width: 30%;
+    /* background: #faa; */
+}
+.b-text{
+    font-family: 'Cafe24Oneprettynight';
+    line-height: 24px;
+    padding-top: 30px;
+}
+.b-text span{
+    font-family: 'Cafe24Shiningstar';
+    font-size: 3rem;
+    padding-left: 10px;
+    line-height: 70px;
+    color: #8E88B8;
+}
+
+/* 프로그램 게이지 바 */
+.Illustrator{
+    width: 70%;
+    height: 20px;
+    background: #ccc;
+}
+.Illustrator .gauge{
+    width: 0%;
+    height: 20px;
+    background: #bfd401;
+    transition: .6s;
+}
+
+#profile.on .Illustrator .gauge{
+    width: 90%;
+    height: 20px;
+    transition-delay: 2s;
+}
+
+.Photoshop{
+    width: 70%;
+    height: 20px;
+    background: #ccc;
+}
+.Photoshop .gauge{
+    width: 0%;
+    height: 20px;
+    background: #bfd401;
+    transition: .6s;
+}
+
+#profile.on .Photoshop .gauge{
+    width: 95%;
+    height: 20px;
+    transition-delay: 2.5s;
+}
+
+.InDesign{
+    width: 70%;
+    height: 20px;
+    background: #ccc;
+}
+.InDesign .gauge{
+    width: 0%;
+    height: 20px;
+    background: #bfd401;
+    transition: .6s;
+}
+
+#profile.on .InDesign .gauge{
+    width: 60%;
+    height: 20px;
+    transition-delay: 3s;
+}
+.VisualStudio{
+    width: 70%;
+    height: 20px;
+    background: #ccc;
+}
+.VisualStudio .gauge{
+    width: 0%;
+    height: 20px;
+    background: #bfd401;
+    transition: .6s;
+}
+
+#profile.on .VisualStudio .gauge{
+    width: 70%;
+    height: 20px;
+    transition-delay: 3.5s;
+}
+.AutoCAD{
+    width: 70%;
+    height: 20px;
+    background: #ccc;
+}
+.AutoCAD .gauge{
+    width: 0%;
+    height: 20px;
+    background: #bfd401;
+    transition: .6s;
+}
+
+#profile.on .AutoCAD .gauge{
+    width: 80%;
+    height: 20px;
+    transition-delay: 4s;
+}
+.sketchup{
+    width: 70%;
+    height: 20px;
+    background: #ccc;
+}
+.sketchup .gauge{
+    width: 0%;
+    height: 20px;
+    background: #bfd401;
+    transition: .6s;
+}
+
+#profile.on .sketchup .gauge{
+    width: 90%;
+    height: 20px;
+    transition-delay: 4.5s;
+}
+
+
+.skill p{
+    width: 20%;
+
+}
+.skill{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* mbti원형게이지 */
+.chart {
+    /* float: left;  */
+    width: 120px; 
+    height: 120px; 
+    text-align: center;
+    position: relative;
+    top: 20px;
+    background: #ccc;
+    border-radius: 50%;
+}
+.chart-title{
+    position: absolute; display: block; width: 100%; text-align: center; 
+    top:50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Cafe24Oneprettynight';
+    font-size: 1.2rem;
+    color: #131313;
+}
+.mbti{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+/* 햄버거 */
+.burger{
+    width: 40px; height: 40px; 
+    cursor: pointer; /* 마우스 손가락모양만들기 */
+    position: fixed;
+    top: 20px; right: 40px;
+    z-index: 999;
+}
+
+.burger .bar{
+    width: 40px; height: 4px;
+    background: #999;
+    position: absolute;
+    transition: .3s;
+}
+
+.burger .bar:nth-child(2),.burger .bar:nth-child(3){
+    top: 16px;
+}
+
+.burger .bar:nth-child(4){
+    top: 32px;
+}
+
+.burger.on .bar:nth-child(2){
+    transform: rotate(45deg);
+}
+
+.burger.on .bar:nth-child(3){
+    transform: rotate(-45deg);
+}
+
+.burger.on .bar:nth-child(1),
+.burger.on .bar:nth-child(4){
+    opacity: 0;
+}
+
+/* 네비 */
+nav.on{
+    z-index: 998;
+    background: rgba(0,0,0,.7);
+}
+
+nav.on .gnb{
+    width: 350px;
+    height: 100vh;
+    padding: 120px 0 0 0;
+    position: absolute;
+    right: 10px;
+    background: #333;
+    color: #fff;
+    transition: .6s;
+    transition-delay: .3s;
+    opacity: 1;
+}
+
+nav .gnb a{
+    line-height: 40px;
+    padding: 0px 20px;
+    transition: .3s;
+}
+nav .gnb a:hover{
+    background: #aaa;
+}
+
+nav{
+    position: fixed;
+    top:0; left:0;
+    z-index: -9999;
+    width:100%; height:100vh;
+    background: rgba(0,0,0,0);
+    transition: .6s;
+}
+nav .gnb{
+    right: -500px;
+    opacity: 0;
+    /* padding: 120px 0 0 0; */
+}
+
+nav .gnb a.active{
+    background:#cae004;
+    color: #333;
+}
+
+
+/* #wrap{
+    width: 600%;
+    display: flex;
+} */
+
+/* 목업이랑 글씨 */
+section .card{
+    position: absolute;
+    top: 10%;
+    left:-250px;
+    opacity: 0;
+    transition: .6s;
+}
+section .mockup{
+    width: 1300px;
+    height: 812px;
+    position: absolute;
+    top:50%; right:-200px;
+    opacity: 0;
+    transition: .6s;
+    transition-delay: .6s;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+section .mockup::after{
+    content: "자세히보기"; /* 필수 */
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #fff;
+    position: absolute;
+    top: 0; left: 0;
+    background: rgba(0,0,0,.7);
+    opacity: 0;
+    transition: .3s;
+}
+
+section .mockup:hover::after{
+    opacity: 1;
+}
+
+/* section .vogue{
+    width: 1500px;
+}
+section.on .vogue{
+    width: 1500px;
+}
+
+section .ottogi{
+    
+} */
+
+section.on .card{
+    position: absolute;
+    top: 10%;
+    left:50px;
+    opacity: 1;
+}
+section.on .mockup{
+    width: 1300px;
+    height: 812px;
+    position: absolute;
+    top:50%; right:0px;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+
+/* 메뉴 점점점 */
+
+.menu{
+    position: fixed;
+    display: flex;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+
+.menu a{
+    width: 12px;
+    height: 12px;
+    background: #ccc;
+    border-radius: 12px;
+    margin: 12px;
+    transition: .3s;
+}
+
+.menu a.on{
+    background: #999;
+    width: 28px;
+    /* outline: 10px solid #333; */
+}
+
+/* 마지막장 */
+#Outro{
+    overflow: hidden;
+    position: relative;
+}
+.text{
+    padding-top: 3%;
+    padding-left: 3%;
+    font-family: 'Cafe24Oneprettynight';
+    font-size: 1.2rem;
+    line-height: 24px;
+}
+.outro-text img{
+    position: absolute;
+    top: 45%; left: 40%;
+}
+.o-po{
+    background: rgb(114, 114, 114);
+    width: 200%;
+    height: 70%;
+    position: relative;
+    opacity: .5;
+    /* z-index: 1; */
+    transform: rotate(5deg) translateX(10000px);
+    transition: .8s;
+    transition-delay: 1.2s;
+}
+.o-fol{
+    background: #849204;
+    width: 200%;
+    height: 70%;
+    position: relative;
+    opacity: .4;
+    /* z-index: 1; */
+    transform: rotate(5deg) translateX(-10000px);
+    transition: .8s;
+    transition-delay: 1.4s;
+}
+.o-port{
+    transform: rotate(-15deg) translateX(-1500px);
+    transform-origin: left center;
+    transition: .8s;
+    transition-delay: 1s;
+    width: 25%;
+    z-index: 99999;
+    display: block;
+}
+.o-folio{
+    display: block;
+    transform: rotate(-15deg) translateX(1200px);
+    transform-origin: right center;
+    transition: .8s;
+    transition-delay: 1.2s;
+    width: 20%;
+    padding-top: 80px;
+    z-index: 99999;
+}
+#Outro.on .o-po{
+    transform: rotate(10deg) translateX(-100px);
+    width: 300%;
+}
+#Outro.on .o-fol{
+    transform: rotate(10deg) translateX(-100px);
+    width: 300%;
+}
+
+#Outro.on .o-port{
+    transform: rotate(-15deg);
+}
+#Outro.on .o-folio{
+    transform: rotate(-15deg);
+}
