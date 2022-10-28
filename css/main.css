@@ -78,7 +78,7 @@ section:nth-child(even){
     font-family: 'Cafe24Oneprettynight';
     font-size: 1.2rem;
     line-height: 24px;
-    z-index: 999999999;
+    z-index: 999;
 }
 .po{
     background: #ffc7c6;
@@ -376,7 +376,7 @@ aside{
     cursor: pointer; /* 마우스 손가락모양만들기 */
     position: fixed;
     top: 20px; right: 40px;
-    z-index: 999;
+    z-index: 999999999999999999;
 }
 
 .burger .bar{
@@ -409,7 +409,7 @@ aside{
 
 /* 네비 */
 nav.on{
-    z-index: 998;
+    z-index: 9999999;
     background: rgba(0,0,0,.7);
 }
 

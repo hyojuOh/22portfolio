@@ -115,3 +115,13 @@ $(".chart").click(
             });
     }
 );
+
+
+// 비엑스슬라이더
+$('#bxslider').bxSlider({
+    auto: true,
+    autoControls: true,
+    stopAutoOnClick: true,
+    pager: true,
+    slideWidth: 600
+  });
