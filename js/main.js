@@ -20,7 +20,7 @@ function go(e){
     count++;
     var goCount = count%5;
     if(e.wheelDelta < 0){
-        if(goCount == 4 && sectionCounter < 5){
+        if(goCount == 4 && sectionCounter < 6){
             sectionCounter++;
         }
     }else{
@@ -38,7 +38,7 @@ function go(e){
 
 function activeMenu(){ /* 휠을 굴렸을때 메뉴이동 */
      // section.forEach(function(ele){ele.classList.remove("on");});
-     for(var i=0; i<section.length; i++){
+    for(var i=0; i<section.length; i++){
         section[i].classList.remove("on");
     }
     section[sectionCounter].classList.add("on");
@@ -102,10 +102,10 @@ $(".btn").click(
 
 
 // 이지파이차트원형
-$(".chart").click(
+$(".chart").hover(
     function(){
         $('.chart1').easyPieChart({
-            barColor: '#8E88B8',
+            barColor: '#947248',
             trackColor: '#ccc',
             // scaleColor: '#fff',
             lineCap: 'butt',
@@ -124,4 +124,4 @@ $('#bxslider').bxSlider({
     stopAutoOnClick: true,
     pager: true,
     slideWidth: 600
-  });
+});

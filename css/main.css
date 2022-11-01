@@ -71,67 +71,27 @@ section:nth-child(even){
     overflow: hidden;
     position: relative;
 }
-.text{
-    position: relative;
-    padding-top: 3%;
-    padding-left: 3%;
+.text p{
+    position: absolute;
+    top: 40px; left: 40px;
+    width: 143px; height: 72px;
+    line-height: 24px;
+    text-align: justify;
     font-family: 'Cafe24Oneprettynight';
     font-size: 1.2rem;
     line-height: 24px;
     z-index: 999;
 }
-.po{
-    background: #ffc7c6;
-    width: 200%;
-    height: 70%;
-    position: relative;
-    opacity: 1;
-    /* z-index: 1; */
-    transform: rotate(5deg) translateX(10000px);
-    transition: .8s;
-    transition-delay: 1.2s;
-}
-.fol{
-    background: rgb(114, 114, 114);
-    width: 200%;
-    height: 70%;
-    position: relative;
-    opacity: .4;
-    /* z-index: 1; */
-    transform: rotate(5deg) translateX(-10000px);
-    transition: .8s;
-    transition-delay: 1.4s;
-}
-.port{
-    transform: rotate(-15deg) translateX(-1200px);
-    transform-origin: left center;
-    transition: .8s;
-    transition-delay: 1s;
-    width: 120%;
-    padding-bottom: 0px;
-}
-.folio{
-    transform: rotate(-15deg) translateX(1200px);
-    transform-origin: right center;
-    transition: .8s;
-    transition-delay: 1.2s;
-    width: 120%;
-    padding-top: 60px;
-}
-#intro.on .po{
-    transform: rotate(10deg) translateX(-100px);
-    width: 300%;
-}
-#intro.on .fol{
-    transform: rotate(10deg) translateX(-100px);
-    width: 300%;
-}
 
-#intro.on .port{
-    transform: rotate(-15deg);
+.title img:nth-child(1){
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 2.5%;
 }
-#intro.on .folio{
-    transform: rotate(-15deg);
+.title img:nth-child(2){
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 2.5%;
 }
 
 /* 다크모드 */
@@ -140,7 +100,7 @@ section:nth-child(even){
     border-radius: 20px;
     background:var(--btn-bg);
     position: absolute;
-    top: 20px;
+    top: 40px;
     left: 40px;
 }
 .btn.active{
@@ -174,58 +134,71 @@ section:nth-child(even){
     color:var(--btn-color);
 }
 /* 2장 프로필 */
+#profile{
+    box-sizing: border-box;
+    padding: 40px;
+}
 .hj{
     width: 200px;
     padding-top: 130px;
-    padding-left: 20px;
+    padding-left: 40px;
 }
 .name{
     padding-top: 20px;
-    padding-left: 20px;
+    padding-left: 10px;
     font-size: 2rem;
     font-family: 'Cafe24Shiningstar';
     line-height: 50px;
 }
 .name span{
     font-size: 3rem;
-    padding-left: 90px;
-    color: #8E88B8;
+    padding-left: 115px;
+    color: #947248;
 }
 aside p{
     line-height: 26px;
     font-size: 1rem;
-    padding-left: 10px;
+    padding-left: 20px;
     font-family: 'Cafe24Oneprettynight';
 }
 aside h3{
-    line-height: 80px;
-    padding-top: 130px;
+    line-height: 100px;
+    padding-top: 80px;
     font-family: 'ghanachoco';
     font-size: 1.5rem;
+    color: #947248;
 }
-.mb h3{
-    padding-top: 52px;
+.b-title1{
+    padding-top: 210px;
+}
+.mb .b-title2{
+    padding-top: 132px;
 }
 
 .profile{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 aside{
-    width: 30%;
+    width: 30%; height: 91.5vh;
     /* background: #faa; */
+}
+aside:nth-child(1){
+    width: 15%;
 }
 .b-text{
     font-family: 'Cafe24Oneprettynight';
     line-height: 24px;
     padding-top: 30px;
+    text-align: justify;
+    padding-left: 10px;
 }
 .b-text span{
     font-family: 'Cafe24Shiningstar';
     font-size: 3rem;
     padding-left: 10px;
     line-height: 70px;
-    color: #8E88B8;
+    color: #947248;
 }
 
 /* 프로그램 게이지 바 */
@@ -233,102 +206,132 @@ aside{
     width: 70%;
     height: 20px;
     background: #ccc;
+    margin-top: 3px;
 }
 .Illustrator .gauge{
     width: 0%;
     height: 20px;
-    background: #bfd401;
+    background: #947248;
     transition: .6s;
+    padding-top: 3px;
+    box-sizing: border-box;
 }
 
 #profile.on .Illustrator .gauge{
     width: 90%;
     height: 20px;
     transition-delay: 2s;
+    padding-top: 3px;
+    box-sizing: border-box;
 }
 
 .Photoshop{
     width: 70%;
     height: 20px;
     background: #ccc;
+    margin-top: 3px;
 }
 .Photoshop .gauge{
     width: 0%;
     height: 20px;
-    background: #bfd401;
+    background: #947248;
     transition: .6s;
+    padding-top: 3px;
+    box-sizing: border-box;
 }
 
 #profile.on .Photoshop .gauge{
     width: 95%;
     height: 20px;
     transition-delay: 2.5s;
+    padding-top: 3px;
+    box-sizing: border-box;
 }
 
 .InDesign{
     width: 70%;
     height: 20px;
     background: #ccc;
+    margin-top: 3px;
 }
 .InDesign .gauge{
     width: 0%;
     height: 20px;
-    background: #bfd401;
+    background: #947248;
     transition: .6s;
+    padding-top: 3px;
+    box-sizing: border-box;
 }
 
 #profile.on .InDesign .gauge{
     width: 60%;
     height: 20px;
     transition-delay: 3s;
+    padding-top: 3px;
+    box-sizing: border-box;
 }
 .VisualStudio{
     width: 70%;
     height: 20px;
     background: #ccc;
+    margin-top: 3px;
 }
 .VisualStudio .gauge{
     width: 0%;
     height: 20px;
-    background: #bfd401;
+    background: #947248;
     transition: .6s;
+    padding-top: 3px;
+    box-sizing: border-box;
 }
 
 #profile.on .VisualStudio .gauge{
     width: 70%;
     height: 20px;
     transition-delay: 3.5s;
+    padding-top: 3px;
+    box-sizing: border-box;
 }
 .AutoCAD{
     width: 70%;
     height: 20px;
     background: #ccc;
+    margin-top: 3px;
 }
 .AutoCAD .gauge{
     width: 0%;
     height: 20px;
-    background: #bfd401;
+    background: #947248;
     transition: .6s;
+    padding-top: 3px;
+    box-sizing: border-box;
 }
 
 #profile.on .AutoCAD .gauge{
     width: 80%;
     height: 20px;
     transition-delay: 4s;
+    padding-top: 3px;
+    box-sizing: border-box;
 }
 .sketchup{
     width: 70%;
     height: 20px;
     background: #ccc;
+    margin-top: 3px;
 }
 .sketchup .gauge{
     width: 0%;
     height: 20px;
-    background: #bfd401;
+    background: #947248;
     transition: .6s;
+    padding-top: 3px;
+    box-sizing: border-box;
 }
 
 #profile.on .sketchup .gauge{
+    box-sizing: border-box;
+    padding-top: 3px;
     width: 90%;
     height: 20px;
     transition-delay: 4.5s;
@@ -337,12 +340,15 @@ aside{
 
 .skill p{
     width: 20%;
+    line-height: 26px;
 
 }
 .skill{
+    height: 26px;
     display: flex;
     justify-content: space-around;
 }
+
 
 /* mbti원형게이지 */
 .chart {
@@ -375,13 +381,13 @@ aside{
     width: 40px; height: 40px; 
     cursor: pointer; /* 마우스 손가락모양만들기 */
     position: fixed;
-    top: 20px; right: 40px;
+    top: 40px; right: 40px;
     z-index: 999999999999999999;
 }
 
 .burger .bar{
     width: 40px; height: 4px;
-    background: #999;
+    background: #947248;
     position: absolute;
     transition: .3s;
 }
@@ -419,7 +425,7 @@ nav.on .gnb{
     padding: 120px 0 0 0;
     position: absolute;
     right: 10px;
-    background: #333;
+    background: #5c3419;
     color: #fff;
     transition: .6s;
     transition-delay: .3s;
@@ -450,8 +456,8 @@ nav .gnb{
 }
 
 nav .gnb a.active{
-    background:#cae004;
-    color: #333;
+    background:#947248;
+    color: #fff;
 }
 
 
@@ -531,7 +537,7 @@ section.on .mockup{
 .menu{
     position: fixed;
     display: flex;
-    bottom: 2%;
+    bottom: 1%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 9999;
@@ -540,14 +546,14 @@ section.on .mockup{
 .menu a{
     width: 12px;
     height: 12px;
-    background: #ccc;
+    background: #CC9174;
     border-radius: 12px;
     margin: 12px;
     transition: .3s;
 }
 
 .menu a.on{
-    background: #999;
+    background: #5c3419;
     width: 28px;
     /* outline: 10px solid #333; */
 }
@@ -556,71 +562,4 @@ section.on .mockup{
 #Outro{
     overflow: hidden;
     position: relative;
-}
-.text{
-    padding-top: 3%;
-    padding-left: 3%;
-    font-family: 'Cafe24Oneprettynight';
-    font-size: 1.2rem;
-    line-height: 24px;
-}
-.outro-text img{
-    position: absolute;
-    top: 45%; left: 40%;
-}
-.o-po{
-    background: rgb(114, 114, 114);
-    width: 200%;
-    height: 70%;
-    position: relative;
-    opacity: .5;
-    /* z-index: 1; */
-    transform: rotate(5deg) translateX(10000px);
-    transition: .8s;
-    transition-delay: 1.2s;
-}
-.o-fol{
-    background: #ffc7c6;
-    width: 200%;
-    height: 70%;
-    position: relative;
-    opacity: 1;
-    /* z-index: 1; */
-    transform: rotate(5deg) translateX(-10000px);
-    transition: .8s;
-    transition-delay: 1.4s;
-}
-.o-port{
-    transform: rotate(-15deg) translateX(-1500px);
-    transform-origin: left center;
-    transition: .8s;
-    transition-delay: 1s;
-    width: 25%;
-    z-index: 99999;
-    display: block;
-}
-.o-folio{
-    display: block;
-    transform: rotate(-15deg) translateX(1200px);
-    transform-origin: right center;
-    transition: .8s;
-    transition-delay: 1.2s;
-    width: 20%;
-    padding-top: 80px;
-    z-index: 99999;
-}
-#Outro.on .o-po{
-    transform: rotate(10deg) translateX(-100px);
-    width: 300%;
-}
-#Outro.on .o-fol{
-    transform: rotate(10deg) translateX(-100px);
-    width: 300%;
-}
-
-#Outro.on .o-port{
-    transform: rotate(-15deg);
-}
-#Outro.on .o-folio{
-    transform: rotate(-15deg);
 }
