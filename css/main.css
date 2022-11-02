@@ -71,11 +71,17 @@ section:nth-child(even){
     overflow: hidden;
     position: relative;
 }
+.intext{
+    position: relative;
+    top: 35%; left: 38%;
+    font-family: 'Cafe24Oneprettynight';
+    font-size: 1.2rem;
+    line-height: 24px;
+}
 .text p{
     position: absolute;
     top: 40px; left: 40px;
     width: 143px; height: 72px;
-    line-height: 24px;
     text-align: justify;
     font-family: 'Cafe24Oneprettynight';
     font-size: 1.2rem;
@@ -184,7 +190,7 @@ aside{
     /* background: #faa; */
 }
 aside:nth-child(1){
-    width: 15%;
+    width: 17%;
 }
 .b-text{
     font-family: 'Cafe24Oneprettynight';
