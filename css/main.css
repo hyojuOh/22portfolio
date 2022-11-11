@@ -18,6 +18,7 @@
     font-weight: normal;
     font-style: normal;
 }
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 :root{
     --btn-bg:#333;
@@ -443,20 +444,26 @@ nav.on .gnb{
     padding: 120px 0 0 0;
     position: absolute;
     right: 10px;
-    background: #5c3419;
+    background: #4b4a4a;
     color: #fff;
     transition: .6s;
     transition-delay: .3s;
     opacity: 1;
+    font-family: 'Lobster', cursive;
+    font-size: 1.2rem;
 }
 
 nav .gnb a{
     line-height: 40px;
     padding: 0px 20px;
     transition: .3s;
+    font-family: 'Lobster', cursive;
+    font-size: 1.2rem;
 }
 nav .gnb a:hover{
     background: #aaa;
+    font-family: 'Lobster', cursive;
+    font-size: 1.2rem;
 }
 
 nav{
@@ -470,12 +477,16 @@ nav{
 nav .gnb{
     right: -500px;
     opacity: 0;
+    font-family: 'Lobster', cursive;
+    font-size: 1.2rem;
     /* padding: 120px 0 0 0; */
 }
 
 nav .gnb a.active{
     background:#947248;
     color: #fff;
+    font-family: 'Lobster', cursive;
+    font-size: 1.2rem;
 }
 
 
