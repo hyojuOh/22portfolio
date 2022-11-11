@@ -118,10 +118,24 @@ $(".chart").hover(
 
 
 // 비엑스슬라이더
-$('#bxslider').bxSlider({
-    auto: true,
+// $('#bxslider').bxSlider({
+//     auto: true,
+//     autoControls: true,
+//     stopAutoOnClick: true,
+//     pager: true,
+//     slideWidth: 1200,
+//     touchEnabled:false,
+//     responsive:true,
+// });이미지 값이 커서 슬라이드가 먼저 실행되어 오류발생
+
+$(window).load(function() {
+    $('#bxslider').bxSlider({
+        auto: true,
     autoControls: true,
     stopAutoOnClick: true,
     pager: true,
-    slideWidth: 600
+    slideWidth: 1200,
+    touchEnabled:false,
+    responsive:true,
+    });
 });
